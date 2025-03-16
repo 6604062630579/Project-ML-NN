@@ -18,7 +18,7 @@ def load_animal_model():
     # โหลด ResNet18 model จาก PyTorch
     model = models.resnet18(pretrained=False)
     model.fc = nn.Linear(model.fc.in_features, 90)  # เปลี่ยนจำนวน output layer ตามจำนวน class ของคุณ (เช่น 90 คลาส)
-    model.load_state_dict(torch.load("animal.pth"))
+    model.load_state_dict(torch.load("animal.pth", map_location=torch.device('cpu')))
     model.eval()  # โหมดสำหรับการทำนาย (inference)
     return model
 
