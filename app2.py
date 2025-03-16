@@ -13,16 +13,15 @@ import plotly.graph_objects as go
 import plotly.io as pio
 
 # โหลดโมเดล Animal Classification ด้วย PyTorch
-@st.cache_resource
 def load_animal_model():
-    # โหลด ResNet18 model จาก PyTorch
-    model = models.resnet18(pretrained=False)
-    model.fc = nn.Linear(model.fc.in_features, 90)  # เปลี่ยนจำนวน output layer ตามจำนวน class ของคุณ (เช่น 90 คลาส)
-    model.load_state_dict(torch.load("animal.pth"))
-    model.eval()  # โหมดสำหรับการทำนาย (inference)
+    model = models.resnet50(pretrained=False)
+    model.fc = nn.Sequential(
+        nn.Dropout(0.5),
+        nn.Linear(model.fc.in_features, 90)
+    )
+    # โหลด state dict บน CPU
+    model.load_state_dict(torch.load("animal.pth", map_location=torch.device('cpu')))
     return model
-
-animal_model = load_animal_model()
 
 # กำหนดค่าเริ่มต้นสำหรับ session state
 if 'page' not in st.session_state:
