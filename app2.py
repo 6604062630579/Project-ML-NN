@@ -26,7 +26,7 @@ animal_model = load_animal_model()
 
 # กำหนดค่าเริ่มต้นสำหรับ session state
 if 'page' not in st.session_state:
-    st.session_state.page = 'NN'
+    st.session_state.page = 'ML'
 
 # CSS จัดปุ่มเมนู
 
@@ -144,7 +144,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/1.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     เริ่มจากผมนำเข้าเครื่องมือพื้นฐานที่จะเป็น เช่น pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost และ joblib
     </p>
 """, unsafe_allow_html=True)
@@ -153,7 +153,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/2.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     ขั้นตอนต่อมาให้โปรแกรมอ่าน อ่านไฟล์ CSV ที่มีข้อมูลพนักงาน และทำการแปลงค่าของ Attrition ให้เป็น 0 หรือ 1
     </p>
 """, unsafe_allow_html=True)
@@ -162,7 +162,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/3.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     แปลงค่า target จาก Yes/No เป็น 1/0 เพื่อใช้กับโมเดล classification
     </p>
 """, unsafe_allow_html=True)
@@ -171,7 +171,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/4.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     เลือกเฉพาะ column ที่จำเป็นเพื่อลดความซับซ้อนของ dataset
     </p>
 """, unsafe_allow_html=True)
@@ -181,7 +181,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/5.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     แปลงข้อมูลที่เป็นตัวอักษร (เช่น ‘Male’, ‘Female’) ให้เป็นตัวเลข
     </p>
 """, unsafe_allow_html=True)
@@ -191,7 +191,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/6.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     แยกข้อมูลสำหรับ training
     </p>
 """, unsafe_allow_html=True)
@@ -201,7 +201,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/7.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     แบ่งข้อมูล 80% train / 20% test
     </p>
 """, unsafe_allow_html=True)
@@ -211,7 +211,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/8.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     สร้าง pipeline ที่รวมขั้นตอน preprocessing (scaling) และ training model
     </p>
 """, unsafe_allow_html=True)
@@ -221,7 +221,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/9.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     ดึงค่าความสำคัญของแต่ละ feature ออกมาจากโมเดล
     </p>
 """, unsafe_allow_html=True)
@@ -231,7 +231,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/9.5.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     เรียงลำดับ feature จากสำคัญมาก → น้อย
     </p>
 """, unsafe_allow_html=True)
@@ -241,7 +241,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/10.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     แสดงผลเป็นกราฟแท่ง
     </p>
 """, unsafe_allow_html=True)
@@ -251,7 +251,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/9.6.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     แผนภูมิแสดงความสำคัญของ feature แต่ละตัว
     </p>
 """, unsafe_allow_html=True)
@@ -261,7 +261,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/11.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     ทดสอบโมเดลบน test set และประเมินผลด้วย Accuracy + Report
     </p>
 """, unsafe_allow_html=True)
@@ -277,7 +277,7 @@ if st.session_state.page == 'ML':
     img = Image.open("code/12.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     บันทึกโมเดลเป็นไฟล์ .pkl เพื่อเรียกใช้ในหน้าเว็บ
     </p>
 """, unsafe_allow_html=True)
@@ -307,7 +307,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.1.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:17px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:17px; text-align:center;'>
     import ไลบรารีที่จำเป็น สำหรับการทำ Deep Learning ด้วย PyTorch และใช้ Mixed Precision training (autocast, GradScaler) เพื่อเพิ่มประสิทธิภาพในการเทรนโมเดลด้วย GPU
     </p>
 """, unsafe_allow_html=True)
@@ -317,7 +317,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.2.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     ตรวจสอบการใช้ GPU ถ้าไม่มี GPU จะใช้ CPU แทน
     </p>
 """, unsafe_allow_html=True)
@@ -327,7 +327,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.3.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     กำหนดค่า Hyperparameters และใช้ patience ในการหยุดการเทรนเมื่อไม่มีการปรับปรุงค่า loss ในจำนวนรอบที่กำหนด
     </p>
 """, unsafe_allow_html=True)
@@ -337,7 +337,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.4.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     การใช้ Data Augmentation ในการปรับข้อมูลภาพเพื่อเพิ่มความหลากหลายของข้อมูล และ Normalize ค่า Pixel ของรูปภาพ โดยใช้ค่า Mean และ Std ของ ImageNet
     </p>
 """, unsafe_allow_html=True)
@@ -347,7 +347,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.5.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     สร้าง DataLoader สำหรับ Training Set และ Validation Set
     </p>
 """, unsafe_allow_html=True)
@@ -357,7 +357,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.6.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     โหลดโมเดล ResNet50 ที่เทรนด้วย ImageNet มาแล้ว
 """, unsafe_allow_html=True)
 
@@ -366,7 +366,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.7.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     ปรับแต่ง Layer สุดท้ายของโมเดลให้เหมาะสมกับจำนวนคลาส และ ลดค่า learning rate ลงอัตโนมัติหาก loss ไม่ลดลงต่อเนื่อง 3 epochs
     </p>
 """, unsafe_allow_html=True)
@@ -376,7 +376,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.8.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     ปรับแต่ง Layer สุดท้ายของโมเดลให้เหมาะสมกับจำนวนคลาส และ ลดค่า learning rate ลงอัตโนมัติหาก loss ไม่ลดลงต่อเนื่อง 3 epochs
     </p>
 """, unsafe_allow_html=True)
@@ -386,7 +386,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.10.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     ในแต่ละ epoch ทำการฝึกโมเดลจากข้อมูล Train แล้วตรวจสอบผลลัพธ์จากข้อมูล Validation
     </p>
 """, unsafe_allow_html=True)
@@ -396,7 +396,7 @@ elif st.session_state.page == 'NN':
     img = Image.open("code/1.11.png")
     st.image(img, use_container_width=True)
     st.markdown("""
-    <p style='font-family:Prompt; font-size:18px; color:black; text-align:center;'>
+    <p style='font-family:Prompt; font-size:18px; text-align:center;'>
     ถ้าผล Validation loss ดีขึ้นจะบันทึกโมเดลใหม่ ถ้าไม่ดีขึ้นติดต่อกัน 3 epochs จะลด learning rate ลง และ จะบันทึกโมเดลที่ดีที่สุด
     </p>
 """, unsafe_allow_html=True)
