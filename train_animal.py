@@ -108,7 +108,7 @@ def main():
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             no_improve = 0
-            torch.save(model.state_dict(), "best_model_cnn.pt")
+            torch.save(model.state_dict(), "animal.pth")
             print(f"✅ Best model saved with validation loss: {val_loss:.4f}")
         else:
             no_improve += 1
