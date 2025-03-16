@@ -23,6 +23,8 @@ def load_animal_model():
     model.load_state_dict(torch.load("animal.pth", map_location=torch.device('cpu')))
     return model
 
+animal_model = load_animal_model()
+
 # กำหนดค่าเริ่มต้นสำหรับ session state
 if 'page' not in st.session_state:
     st.session_state.page = 'NN'
