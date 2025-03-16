@@ -282,16 +282,6 @@ if st.session_state.page == 'ML':
     </p>
 """, unsafe_allow_html=True)
 
-
-
-
-
-
-
-
-
-
-
 # หน้า Neural Network
 elif st.session_state.page == 'NN':
     st.title("Neural Network")
@@ -410,45 +400,6 @@ elif st.session_state.page == 'NN':
     ถ้าผล Validation loss ดีขึ้นจะบันทึกโมเดลใหม่ ถ้าไม่ดีขึ้นติดต่อกัน 3 epochs จะลด learning rate ลง และ จะบันทึกโมเดลที่ดีที่สุด
     </p>
 """, unsafe_allow_html=True)
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
